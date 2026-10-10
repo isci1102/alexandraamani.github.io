@@ -1,0 +1,71 @@
+# BASIC DETAILS — keep the quotation marks when editing.
+title: "Alexandra Amani"
+description: "Economics, statistics, data science — and the questions I am exploring along the way."
+email: "alexandraamani1102@gmail.com"
+lang: "en"
+# After creating YOURUSERNAME.github.io, add its address below.
+url: ""
+baseurl: ""
+
+# DRAFT MODE: adds a visible draft banner and a noindex tag.
+# This is NOT privacy protection. A published site and a public repo are public.
+# Set to false only after reviewing the copy and replacing/removing examples.
+preview_mode: true
+
+# Optional links. Leave empty to hide them; do not invent placeholder URLs.
+github_url: ""
+linkedin_url: ""
+# Upload your CV first, then set this to /assets/files/Alexandra-Amani-CV.pdf
+# With an empty value, the button reads "Request CV" and opens an email.
+cv_path: ""
+# Upload your actual photo first, then set this to /assets/images/portrait.jpg
+# With an empty value, an explicitly labelled typographic placeholder appears.
+portrait_path: ""
+portrait_alt: "Portrait of Alexandra Amani"
+
+# BUILD SETTINGS — leave these alone to begin with.
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+timezone: Europe/Paris
+collections:
+  research:
+    output: true
+    permalink: /research/:name/
+  projects:
+    output: true
+    permalink: /projects/:name/
+  updates:
+    output: true
+    permalink: /updates/:name/
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: work
+      section: research
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: work
+      section: projects
+  - scope:
+      path: ""
+      type: updates
+    values:
+      layout: update
+      section: updates
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .bundle
+  - .gitignore

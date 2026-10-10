@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<section class="page-content shell">
+  <header class="page-header"><p class="eyebrow">{{ page.eyebrow | escape }}</p><h1>{{ page.title | escape }}</h1><p class="page-description">{{ page.description | escape }}</p></header>
+  <div class="prose listing-intro">{{ content }}</div>
+  {% if page.section == 'research' %}{% assign entries = site.research | sort: 'order' %}{% else %}{% assign entries = site.projects | sort: 'order' %}{% endif %}
+  <div class="work-grid">{% for work in entries %}{% include work-card.html item=work %}{% else %}<p>Write-ups will appear here as I add them.</p>{% endfor %}</div>
+</section>

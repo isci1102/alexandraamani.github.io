@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<article class="page-content shell">
+  <a class="text-link back-link" href="{{ '/' | append: page.section | append: '/' | relative_url }}">← Back to {{ page.section | capitalize }}</a>
+  <header class="page-header"><p class="eyebrow">{{ page.category | escape }}</p><h1>{{ page.title | escape }}</h1><p class="page-description">{{ page.summary | escape }}</p><div class="work-meta">{% if page.status %}<span>{{ page.status | escape }}</span>{% endif %}{% if page.tools %}<span>{{ page.tools | escape }}</span>{% endif %}</div></header>
+  {% if page.example %}<aside class="example-notice"><strong>Draft example — not a finished portfolio entry.</strong> Replace this sample with your own description and verified details, or delete it before launch.</aside>{% endif %}
+  <div class="prose">{{ content }}</div>
+  {% if page.links %}<div class="resource-links">{% for link in page.links %}<a class="button secondary" href="{{ link.url | relative_url }}">{{ link.label | escape }} <span aria-hidden="true">↗</span></a>{% endfor %}</div>{% endif %}
+</article>

@@ -1,0 +1,7 @@
+---
+layout: default
+---
+<article class="page-content shell">
+  <header class="page-header"><p class="eyebrow">{{ page.eyebrow | default: 'ALEXANDRA AMANI' | escape }}</p><h1>{{ page.title | escape }}</h1>{% if page.description %}<p class="page-description">{{ page.description | escape }}</p>{% endif %}</header>
+  <div class="prose">{{ content }}</div>
+</article>

@@ -1,0 +1,14 @@
+<div class="portrait-wrap">
+  <div class="portrait-frame">
+    {% if site.portrait_path != '' %}
+    <img class="portrait" src="{{ site.portrait_path | relative_url }}" alt="{{ site.portrait_alt | escape }}" width="680" height="800" fetchpriority="high">
+    {% else %}
+    <div class="portrait-placeholder" role="img" aria-label="Portrait placeholder — replace with your own photograph">
+      <span class="portrait-initials" aria-hidden="true">Aa<span>.</span></span>
+      <span class="portrait-caption">Your portrait, here.</span>
+    </div>
+    {% endif %}
+  </div>
+  <span class="portrait-star" aria-hidden="true">✳</span>
+  <span class="portrait-note">A work in progress.<br>In the best way.</span>
+</div>

@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<section class="page-content shell">
+  <header class="page-header"><p class="eyebrow">NOTES FROM ALONG THE WAY</p><h1>{{ page.title | escape }}</h1><p class="page-description">{{ page.description | escape }}</p></header>
+  <div class="prose listing-intro">{{ content }}</div>
+  <div class="updates-list">{% assign recent = site.updates | sort: 'date' | reverse %}{% for update in recent %}{% include update-row.html item=update %}{% else %}<p>No updates yet. More to come as this space grows.</p>{% endfor %}</div>
+</section>

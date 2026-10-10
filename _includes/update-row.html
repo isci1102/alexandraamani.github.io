@@ -1,0 +1,5 @@
+<article class="update-row">
+  <div class="update-date"><time datetime="{{ include.item.date | date: '%Y-%m-%d' }}">{{ include.item.date | date: '%b %Y' }}</time>{% if include.item.example %}<span class="example-label">Example</span>{% endif %}</div>
+  <div><h3><a href="{{ include.item.url | relative_url }}">{{ include.item.title | escape }}</a></h3><p>{{ include.item.summary | escape }}</p></div>
+  <span class="update-arrow" aria-hidden="true">↗</span>
+</article>
